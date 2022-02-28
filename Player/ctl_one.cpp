@@ -2,8 +2,8 @@
 #include <iostream>
 #include "resource.h"
 #include <vector>
-#include<string>
-#include<cstring>
+#include <string>
+#include <cstring>
 #include <cstdlib>
 #include <fstream>
 #include <sys/stat.h>
@@ -88,9 +88,6 @@ public:
 		return string(v);
 
 	}
-
-	
-
 
 	
 };
@@ -517,17 +514,6 @@ BOOL CALLBACK DlgProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam)
 						}
 					}
 
-					/*
-
-					/////////////////////////////
-					//////////////////////////////
-					//
-
-
-
-					*/
-
-
 					else {
 						HWND hList = GetDlgItem(hwnd, IDC_LIST);
 						int count = SendMessage(hList, LB_GETSELCOUNT, 0, 0);
@@ -548,19 +534,14 @@ BOOL CALLBACK DlgProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam)
 									char cmd[300];
 									strcpy(cmd, "\"");
 									string strcmd;
-									//strcmd.append("\"");
+									
 									strcat(cmd, ProjectPath);
 									
 									strcat(cmd, auxv.GetVideoName().c_str());
 									strcat(cmd, "\"");
 									Channels[CurrentChannel].AddVideo(string(cmd));
 									
-									
-
-
-									//strcmd.append(string("\""));
-
-									//strcpy(cmd, strcmd.c_str());
+				
 									system(cmd);
 
 									Channels[CurrentChannel].videos.erase(Channels[CurrentChannel].videos.begin() + (Channels[CurrentChannel].videos.size())-1);
