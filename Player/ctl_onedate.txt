@@ -1,2 +1,2 @@
-oricemanevra,0
+orice,0
 asd,0
